@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <title>My Family</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: turquoise;
+            text-align: center;
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        button{
+            background-color: orangered;
+            border: 1px solid;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover{
+            box-shadow: 1px 1px 5px;
+        }
+        img{
+            width: 150px;
+            height :180px;
+        }
+    </style>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+    <h1>My Family Book!</h1>
+    <img id="family_img" src="Saransh.jpg">
+    <h4 id="family_mem_name"></h4>
+    <button onclick="update()">Next</button>
+    <p>In human society, the family is important as humans are a social animal and they need a framework of values and support system in order to survive. Family refers to the group of related people where every individual has regard, trust, cooperation, and affection towards each other. In today’s fast-paced world we should consider ourselves very lucky if we have a healthy and happy family. The most important function of the family is providing learning on values, cultures, and traditions to generation.</p>
+    </div>
+    
+
+    <script src="smooth.js"></script>
+    <script>
+        var names=["Me",
+        "Sasmita Dey",
+        "Soumitri Dutta",
+        "Goutam Dutta",
+        "Asharani Dutta",
+        "Narayan Dutta",
+        "Alok Dey",
+        "Basanti Dey",
+        "Maheswar Dey",
+        "Saransh Dutta"];
+
+        var imgs=["Me.JPG",
+        "sasmita.jpg",
+        "Saumitri.jpeg",
+        "Goutam.jpg",
+        "Asharani.jpg",
+        "Narayan.JPG",
+        "alok kumar.jpg",
+        "Basanti dey.jpg",
+        "Maheswar.jpg",
+        "Saransh.jpg"];
+
+        var i = 0
+        function update(){
+            i++;
+            var numbers_of_family_member_in_array = 9;
+            if(i > numbers_of_family_member_in_array){
+                i=0;
+            }
+            var updatedImage = imgs[i];
+            var updatedName = names[i];
+            document.getElementById("family_img").src = updatedImage;
+            document.getElementById("family_mem_name").innerHTML = updatedName;
+        }
+    </script>
+</body>
+</html>
